@@ -1,0 +1,14 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Rolo</title>
+        {% else %}
+        <title>Welcome to Rolo!</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Rolodex: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+<html>
