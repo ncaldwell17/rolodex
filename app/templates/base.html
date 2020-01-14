@@ -1,17 +1,24 @@
-<html>
-    <head>
-        {% if title %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
         <title>{{ title }} - Rolo</title>
-        {% else %}
+    {% else %}
         <title>Welcome to Rolo!</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>Rolodex: 
-            <a href="/index">Home</a>
-            <a href="/about">About</a>
-        </div>
-        <hr>
-        {% block content %}{% endblock %}
-    </body>
-<html>
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+
+</head>
+<body>
+    <div>Rolodex:
+        <a href="/index">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <hr>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
