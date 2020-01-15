@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-  background-image: url('images/swissbackground.jpg');
+  background-image: url('../static/styles/images/swissbackground.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
