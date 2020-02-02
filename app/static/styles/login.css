@@ -63,3 +63,14 @@ body {
   color: #666;
   padding: 40px 0;
 }
+
+.content {
+  min-height: 60%;
+  min-width: 40%;
+  position: absolute;
+  left: 200px;
+  top: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+}

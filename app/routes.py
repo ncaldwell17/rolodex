@@ -23,10 +23,10 @@ def index():
 
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('index'))
 
         login_user(user, remember=form.remember_me.data)
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
 
     return render_template('main.html', form=form)
 
@@ -50,6 +50,6 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('You are now a registered user')
-        return redirect(url_for('login'))
+        return redirect(url_for('index'))
     return render_template('register.html', title='Register', form=form)
 
